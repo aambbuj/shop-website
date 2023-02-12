@@ -21,4 +21,6 @@ Route::get('/',[UserController::class , 'index']);
 Route::post('/add-information',[UserController::class , 'addInformation']);
 Route::get('/show-information',[UserController::class , 'showInformation']);
 Route::get('/action/{id}/{action}/{value}',[UserController::class , 'actionUser']);
+Route::get('/recharge-plans',[UserController::class , 'rechargePlans']);
+// Route::get('/show-details',[UserController::class , 'showDetails']);
 

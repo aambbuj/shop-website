@@ -18,7 +18,7 @@ class UserController extends Controller
        $user->phone = $request->phone;
        $user->pin = $request->pin;
        $user->city = $request->block;
-       $user->state = $request->district;
+       $user->state = $request->state;
        $user->district = $request->district;
        $user->address = $request->address;
        $user->assign_user = 1;
@@ -26,7 +26,8 @@ class UserController extends Controller
        $user->status = 'Active';
 
        $user->save();
-       return redirect('/')->with('success', 'Your data has been save successfully!');;
+       return view('success',compact('user'))->with('success', 'Your data has been save successfully!');
+    //    return redirect('/')->with('success', 'Your data has been save successfully!');;
     }
 
     public function showInformation()
@@ -39,5 +40,10 @@ class UserController extends Controller
     {
         $user = User::where('id',$id)->update(['action' => $action , 'status' => $value]);
         return redirect('/show-information')->with('success', 'Your Action Update successfully!');;
+    }
+
+    public function rechargePlans()
+    {
+        return view('rechargePlan');
     }
 }
