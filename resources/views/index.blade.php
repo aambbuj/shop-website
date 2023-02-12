@@ -24,7 +24,7 @@
     </div>
   </div>
 
-    <h3 class="text-center" style="color:brown; center ; text-shadow: 2px 2px #bbd1d0d1;">BSNL apply for new sim </h3>
+    <h3 class="text-center mt-4" style="color:brown; center ; text-shadow: 2px 2px #bbd1d0d1;">BSNL apply for new sim </h3>
   <form action="{{url('/add-information')}}" method="post">
     @csrf
 
@@ -43,7 +43,7 @@
 
     <div class="col-md-3 text-center mt-2">
         <!-- <label class="form-label">Phone</label> -->
-        <input type="number" id="phone"  name="phone" placeholder="Enter your phone" minlength="10" maxlength="10" required  class="form-control text-center">
+        <input type="number"  name="phone" placeholder="Enter your phone" minlength="10" maxlength="10" required  class="form-control text-center">
     </div>
 
     <div class="col-md-3 text-center mt-2">
@@ -92,23 +92,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 
 <script type="text/javascript">
-  $("#phone").keydown(function(event) {
-    k = event.which;
-    if ((k >= 96 && k <= 105) || k == 8) {
-      if ($(this).val().length == 10) {
-        if (k == 8) {
-          return true;
-        } else {
-          event.preventDefault();
-          return false;
+  // $("#phone").keydown(function(event) {
+  //   k = event.which;
+  //   if ((k >= 96 && k <= 105) || k == 8) {
+  //     if ($(this).val().length == 10) {
+  //       if (k == 8) {
+  //         return true;
+  //       } else {
+  //         event.preventDefault();
+  //         return false;
 
-        }
-      }
-    } else {
-      event.preventDefault();
-      return false;
-    }
-  });
+  //       }
+  //     }
+  //   } else {
+  //     event.preventDefault();
+  //     return false;
+  //   }
+  // });
   $(document).ready(function(){
     var alll_postoffice=[];
       $('#pinCode').keyup(function(e) {
